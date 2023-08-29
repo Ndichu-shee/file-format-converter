@@ -36,7 +36,7 @@ def convert_to_json(all_data_frame, data_set_name, file_name, target_dir):
 
 def process_file_data(data_set_name, source_dir, target_dir):
     schema = json.load(open(f"{source_dir}/schemas.json"))
-    file_dirs = glob.glob(f"{source_dir}/{data_set_name}/part-*")
+    file_dirs = glob.glob(f"{source_dir}{data_set_name}/part-*")
     print(f"::::::::::::::{file_dirs}>>>>>>>>>>>>>>>>>")
 
     if len(file_dirs) == 0:
